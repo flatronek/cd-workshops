@@ -3,7 +3,9 @@ package pl.edu.agh.sbrandys.cdworkshops;
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.assertion.ViewAssertions;
 import android.support.test.espresso.matcher.ViewMatchers;
+import android.support.test.rule.ActivityTestRule;
 
+import org.junit.Rule;
 import org.junit.Test;
 
 /**
@@ -11,6 +13,9 @@ import org.junit.Test;
  */
 
 public class MainActivityTest {
+
+    @Rule
+    public ActivityTestRule<MainActivity> rule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
     public void shouldDisplay_HelloWorld() {
